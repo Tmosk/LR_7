@@ -63,11 +63,9 @@ void print(list li) {
 
 int sort(list li) {
     int count = li.size;
-    for (int i = 0; i < count; i++)
-        for (int j = i + 1; j < count; j++) {
-            if (strcmp(get(li, i)->data, get(li, j)->data) < 0) {
+    for (int i = 0; i < count-1; i++)
+            if (strcmp(get(li, i)->data, get(li, i+1)->data) < 0) {
                 return 0;
-            }
         }
     return 1;
 }
